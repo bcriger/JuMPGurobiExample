@@ -38,6 +38,7 @@ function new_ilp()
 
 	JuMP.@constraint(ilp, c2, 7x + 12y >= 120)
 
+	ilp
 end
 
 function solve_two_ilps()
