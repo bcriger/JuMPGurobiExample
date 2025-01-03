@@ -10,7 +10,7 @@ function new_ilp()
 		ilp = JuMP.Model(HiGHS.Optimizer)
 		HiGHS.Highs_resetGlobalScheduler(1)
 	elseif OPTIMIZATION_MODULE == "Gurobi"    
-		ilp = JuMP.Model(() -> Gurobi.Optimizer(gurobi_env[]))
+		ilp = JuMP.Model(Gurobi.Optimizer(GRB_ENV_REF[]))
 	end
 	
 	#=
