@@ -21,11 +21,11 @@ try
     global const gurobi_env = Ref{Gurobi.Env}()
     # global const gurobi_env = Gurobi.Env()
     
-    # function __init__()
-    #     global gurobi_env
-    #     gurobi_env[] = Gurobi.Env()
-    #     return
-    # end
+    function __init__()
+        global gurobi_env
+        gurobi_env[] = Gurobi.Env()
+        return
+    end
 
     # assure an error will be generated without a valid license
     # _ = Gurobi.Env()
