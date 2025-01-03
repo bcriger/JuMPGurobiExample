@@ -13,13 +13,14 @@ import MathOptInterface as MOI
 =#
 
 import Gurobi
+import HiGHS
 
 try
 	# see ->-v
 	# jump.dev/JuMP.jl/stable/packages/Gurobi/#Reusing-the-same-Gurobi-environment-for-multiple-solves
 	
 	global const GRB_ENV_REF = Ref{Gurobi.Env}()
-
+	
 	function __init__()
 		global GRB_ENV_REF
 		GRB_ENV_REF[] = Gurobi.Env()
@@ -28,7 +29,6 @@ try
 
 	global const OPTIMIZATION_MODULE = "Gurobi"
 catch
-	import HiGHS
 	global const OPTIMIZATION_MODULE = "HiGHS"
 end
 
