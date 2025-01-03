@@ -1,6 +1,6 @@
 using JuMPGurobiExample
 using Test
 
-@testset "JuMPGurobiExample.jl" begin
+@testset "JuMPGurobiExample" begin
     # Write your tests here.
 end

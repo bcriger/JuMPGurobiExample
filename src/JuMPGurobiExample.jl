@@ -38,6 +38,6 @@ catch
     global const OPTIMIZATION_MODULE = "HiGHS"
 end
 
-end
-
 include("solve_two_ILPs.jl")
+
+end
