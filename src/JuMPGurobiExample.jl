@@ -26,8 +26,8 @@ end
 
 const OPTIMIZATION_MODULE = "Gurobi"
 
-import HiGHS
-const OPTIMIZATION_MODULE = "HiGHS"
+# import HiGHS
+# const OPTIMIZATION_MODULE = "HiGHS"
 
 include("solve_two_ILPs.jl")
 
